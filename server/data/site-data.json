@@ -1,0 +1,23 @@
+{
+  "reviews": [
+    {
+      "id": "seed-1",
+      "name": "Thomas Richter",
+      "rating": 5,
+      "comment": "A wonderful place to stay before our Adam’s Peak hike. Friendly family, clean rooms, and a great location."
+    },
+    {
+      "id": "seed-2",
+      "name": "Sarah Morris",
+      "rating": 5,
+      "comment": "Amazing hospitality and beautiful views. The room was spacious and the family was so welcoming."
+    },
+    {
+      "id": "seed-3",
+      "name": "Julien Dupont",
+      "rating": 5,
+      "comment": "Clean, comfortable and peaceful. Great Sri Lankan dinner cooked fresh on site."
+    }
+  ],
+  "reservations": []
+}
