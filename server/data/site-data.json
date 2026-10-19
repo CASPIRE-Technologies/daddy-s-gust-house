@@ -1,22 +1,22 @@
 {
   "reviews": [
     {
-      "id": "seed-1",
-      "name": "Thomas Richter",
+      "id": "booking-gimhan",
+      "name": "Gimhan",
       "rating": 5,
-      "comment": "A wonderful place to stay before our Adam’s Peak hike. Friendly family, clean rooms, and a great location."
+      "comment": "The staff was very good, especially the Tamil lady who was very kind and helpful. The property was clean and comfortable. We asked for an early check-in after climbing Adam’s Peak, and they allowed it, which was very helpful and much appreciated...."
     },
     {
-      "id": "seed-2",
-      "name": "Sarah Morris",
+      "id": "booking-naomi",
+      "name": "Naomi",
       "rating": 5,
-      "comment": "Amazing hospitality and beautiful views. The room was spacious and the family was so welcoming."
+      "comment": "Staff were incredibly helpful and friendly. Food from the restaurant onsite was delicious and very well priced. Location is close to the entrance of Adam’s Peak trail, only a few minutes walk. Staff made us a meal that we could take on the trail."
     },
     {
-      "id": "seed-3",
-      "name": "Julien Dupont",
+      "id": "booking-tenzin",
+      "name": "Tenzin",
       "rating": 5,
-      "comment": "Clean, comfortable and peaceful. Great Sri Lankan dinner cooked fresh on site."
+      "comment": "The room is spacious and clean, one of the more comfortable pillows and mattresses we had during our whole trip. The location is good too, near the restaurants and still walking distance to Sri Pada entrance. You can even see it from the...."
     }
   ],
   "reservations": []
