@@ -343,7 +343,6 @@ body{background:var(--christmas-cream)}
 .react-button.secondary{color:var(--christmas-evergreen);background:#fff;border-color:var(--christmas-evergreen)}
 .react-button.secondary:hover{color:#fff;background:var(--christmas-evergreen);border-color:var(--christmas-evergreen)}
 .react-page-hero{position:relative;background:linear-gradient(135deg,var(--christmas-blush),var(--christmas-cream) 54%,var(--christmas-ice));border-bottom-color:#efd3d3}
-.react-page-hero::after,.react-food::after,.react-home-rooms::after{content:"✦  ❄  ✧  ❄  ✦";position:absolute;right:5%;bottom:18px;color:rgba(166,31,53,.16);font-size:1.1rem;letter-spacing:1.1em;pointer-events:none}
 .react-page-hero h1,.react-intro h2,.react-section-heading h2,.react-location h2,.react-contact h2,.react-about-intro h2,.react-about-values h2,.react-about-timeline h3,.react-about-value-grid h3,.react-dining-intro h2,.react-dining-gallery-heading h2{color:var(--christmas-cranberry-deep)}
 .react-page-hero span,.react-kicker,.react-eyebrow{color:var(--christmas-cranberry)}
 .react-page-section,.react-intro,.react-home-welcome,.react-home-amenities,.react-home-stories,.react-home-moments,.react-dining-page,.react-about-page{background-color:transparent}
