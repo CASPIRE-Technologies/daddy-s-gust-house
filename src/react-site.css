@@ -515,19 +515,75 @@ input:focus,select:focus,textarea:focus{border-color:var(--christmas-cranberry);
     transform:none;
     overflow:visible;
     padding:0;
-    align-items:flex-start;
+    align-items:center;
     gap:clamp(4px,1.4vw,14px);
     background:transparent;
     box-shadow:none;
   }
-  .react-header.nav-open .react-nav a{padding:clamp(7px,1.8vw,13px) 0;color:rgba(255,255,255,.9);font-size:clamp(.95rem,2.6vw,1.2rem)}
+  .react-header.nav-open .react-nav a{display:flex;align-items:center;justify-content:center;width:min(100%,250px);padding:clamp(9px,1.8vw,13px) 18px;color:rgba(255,255,255,.94);font-size:clamp(.95rem,2.6vw,1.2rem);text-align:center;text-decoration:none;border:1px solid rgba(255,255,255,.24);border-radius:16px;background:rgba(255,255,255,.11);box-shadow:inset 0 1px 0 rgba(255,255,255,.18),0 10px 24px rgba(2,30,21,.12);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+  .react-header.nav-open .react-nav a:not(.react-book)::after{display:none}
+  .react-header.nav-open .react-nav a.active{border-color:rgba(255,211,102,.78);background:rgba(166,31,53,.38);box-shadow:inset 0 1px 0 rgba(255,255,255,.22),0 10px 24px rgba(2,30,21,.16)}
   .react-header.nav-open .react-nav a.active{color:#fff}
-  .react-header.nav-open .react-nav .react-book{width:max-content;margin-top:12px;padding:12px 18px;color:#fff;background:var(--christmas-cranberry)}
+  .react-header.nav-open .react-nav .react-book{width:min(100%,250px);margin-top:12px;padding:12px 18px;color:#fff;background:rgba(166,31,53,.9);border-color:rgba(255,255,255,.32)}
 }
 
 @media(max-width:420px){
   .react-header.nav-open{grid-template-columns:110px minmax(0,1fr);gap:16px;padding-inline:18px}
   .react-header.nav-open .react-brand img{width:112px}
   .react-header.nav-open .react-nav a{font-size:.92rem}
+}
+
+/* Centered menu mode: no logo, with slide-in and slide-out transitions. */
+@media(max-width:860px){
+  .react-header.nav-open,
+  .react-header.nav-closing{grid-template-columns:1fr;justify-items:center;align-content:center;gap:0}
+  .react-header.nav-open .react-brand,
+  .react-header.nav-closing .react-brand{display:none}
+  .react-header.nav-open .react-nav,
+  .react-header.nav-closing .react-nav{justify-self:center;width:min(100%,390px);align-items:center;transform:none;animation:react-menu-slide-in .36s cubic-bezier(.22,1,.36,1) both}
+  .react-header.nav-closing .react-nav{animation-name:react-menu-slide-out}
+  .react-header.nav-open .react-nav a,
+  .react-header.nav-closing .react-nav a{width:100%;max-width:360px}
+  .react-header.nav-open .react-menu-button,
+  .react-header.nav-closing .react-menu-button{position:absolute}
+}
+@keyframes react-menu-slide-in{from{opacity:0;transform:translateY(34px)}to{opacity:1;transform:translateY(0)}}
+@keyframes react-menu-slide-out{from{opacity:1;transform:translateY(0)}to{opacity:0;transform:translateY(34px)}}
+
+/* Christmas styling for the full-screen menu. */
+@media(max-width:860px){
+  .react-header.nav-open,
+  .react-header.nav-closing{
+    isolation:isolate;
+    overflow:hidden;
+    background:
+      radial-gradient(circle at 12% 18%,rgba(218,176,65,.18),transparent 22%),
+      radial-gradient(circle at 88% 82%,rgba(166,31,53,.3),transparent 28%),
+      linear-gradient(145deg,#063b2b 0%,#0d5a3f 52%,#082d24 100%);
+  }
+  .react-header.nav-open::before,
+  .react-header.nav-closing::before,
+  .react-header.nav-open::after,
+  .react-header.nav-closing::after{
+    content:"";
+    position:absolute;
+    right:0;
+    left:0;
+    height:12px;
+    z-index:-1;
+    background:repeating-linear-gradient(135deg,var(--christmas-cranberry) 0 16px,#fff 16px 28px,var(--christmas-evergreen-light) 28px 44px);
+  }
+  .react-header.nav-open::before,.react-header.nav-closing::before{top:0}
+  .react-header.nav-open::after,.react-header.nav-closing::after{bottom:0}
+  .react-header.nav-open .react-nav a,
+  .react-header.nav-closing .react-nav a{
+    border-color:rgba(255,255,255,.26);
+    background:linear-gradient(135deg,rgba(255,255,255,.16),rgba(255,255,255,.07));
+    box-shadow:inset 0 1px 0 rgba(255,255,255,.24),0 12px 28px rgba(2,30,21,.18);
+  }
+  .react-header.nav-open .react-nav a:hover,
+  .react-header.nav-open .react-nav a:focus-visible{border-color:rgba(239,200,91,.92);background:rgba(166,31,53,.42)}
+  .react-header.nav-open .react-nav a.active{color:#fff;border-color:#efc85b;background:linear-gradient(135deg,rgba(166,31,53,.72),rgba(119,18,39,.58));box-shadow:inset 0 1px 0 rgba(255,255,255,.26),0 12px 30px rgba(166,31,53,.22)}
+  .react-header.nav-open .react-nav .react-book{background:linear-gradient(135deg,#c52945,#8f1631);border-color:#f1c96b;box-shadow:0 12px 28px rgba(166,31,53,.28)}
 }
 
